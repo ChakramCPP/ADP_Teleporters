@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SampleComponent } from './components/chakri/sample/sample.component';
+import { Sample2Component } from './components/chakri/sample2/sample2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent
+    SampleComponent,
+    Sample2Component
   ],
   imports: [
     BrowserModule,

@@ -123,12 +123,8 @@
       }
     }
   },
-<<<<<<< HEAD
   "defaultProject": "teleporters",
   "cli": {
     "analytics": false
   }
-=======
-  "defaultProject": "teleporters"
->>>>>>> 5c618c3fd5b83f44009c32222938c1307ea4bfcb
 }
