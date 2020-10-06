@@ -10,6 +10,10 @@ import { KanbanComponent } from './components/chakri/kanban/kanban.component';
 import { ChatComponent } from './components/chakri/chat/chat.component';
 import { PollComponent } from './components/chakri/poll/poll.component';
 import { SurveyComponent } from './components/chakri/survey/survey.component';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
+import { NbChatModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,13 @@ import { SurveyComponent } from './components/chakri/survey/survey.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbSidebarModule.forRoot(),
+    NbButtonModule,
+    NbChatModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
