@@ -14,6 +14,7 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 import { NbChatModule } from '@nebular/theme';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NbChatModule } from '@nebular/theme';
     NbSidebarModule.forRoot(),
     NbButtonModule,
     NbChatModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

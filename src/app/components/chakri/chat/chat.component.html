@@ -15,11 +15,37 @@
                              [quote]="message.quote"
                              [latitude]="message.latitude"
                              [longitude]="message.longitude"
-                             [avatar]="message.user.avatar">
+                             [avatar]="message.user.avatar">              
             </nb-chat-message>
+            
             <nb-chat-form (send)="sendMessage($event, 'Jake', 'http://www.reactiongifs.com/r/wnd1.gif', true)" [showButton]="false" [dropFiles]="true">
             </nb-chat-form>
-          </nb-chat>
-      <button nbButton>Hello World</button>
+        </nb-chat>
+      <button nbButton (click)="openModal(template)">Clear Chat</button>
+
+      <button type="button" class="btn btn-primary" (click)="openModal(template)">Open modal</button>
+      <br><br>
+      <pre class="card card-block card-header">{{message}}</pre>
+      <ng-template #template>
+        <div class="modal-body text-center">
+          <p>Do you want to confirm? Star messages...</p>
+          <div *ngFor="let message of messages;let idx=index;">
+            
+           
+            <ul>
+              <li>
+                <button *ngIf="ar[idx]==1" class="btn-success">✓</button>
+                <a (click)="saveChat(idx)">{{message.text}}</a>
+              </li>
+            </ul>
+            <ul>
+                 
+            </ul>
+          </div>
+          <br>
+          <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+          <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+        </div>
+      </ng-template>
     </nb-layout-column>
-  </nb-layout>
+</nb-layout>
