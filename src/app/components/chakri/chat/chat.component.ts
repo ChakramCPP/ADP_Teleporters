@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
+// import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+// import { NbEvaIconsModule } from '@nebular/eva-icons';
+// import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
