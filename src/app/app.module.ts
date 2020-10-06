@@ -14,6 +14,7 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 import { NbChatModule } from '@nebular/theme';
+import { PushComponent } from './components/snehita/push/push.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NbChatModule } from '@nebular/theme';
     KanbanComponent,
     ChatComponent,
     PollComponent,
-    SurveyComponent
+    SurveyComponent,
+    PushComponent
   ],
   imports: [
     BrowserModule,
