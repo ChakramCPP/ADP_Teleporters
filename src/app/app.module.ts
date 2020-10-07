@@ -1,3 +1,4 @@
+import { LongPress } from './components/chakri/chat/long-press';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,11 +11,12 @@ import { KanbanComponent } from './components/chakri/kanban/kanban.component';
 import { ChatComponent } from './components/chakri/chat/chat.component';
 import { PollComponent } from './components/chakri/poll/poll.component';
 import { SurveyComponent } from './components/chakri/survey/survey.component';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCheckboxModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 import { NbChatModule } from '@nebular/theme';
 import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     KanbanComponent,
     ChatComponent,
     PollComponent,
-    SurveyComponent
+    SurveyComponent,
+    LongPress
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     NbSidebarModule.forRoot(),
     NbButtonModule,
     NbChatModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    NbCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

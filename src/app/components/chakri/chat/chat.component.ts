@@ -1,4 +1,4 @@
-import { Component, OnInit,TemplateRef } from '@angular/core';
+import { Component, OnInit,TemplateRef,ViewChild,ElementRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
@@ -10,7 +10,23 @@ import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 })
 export class ChatComponent implements OnInit {
 
-  ch="chat"
+  // @ViewChild('buttonlong') button;
+  // longPress = 'first state';
+  // longPressing = 0;
+  // isLongPressed = false;
+
+  // onLongPress() {
+  //   this.longPressing = null;
+  //   if (this.isLongPressed) this.button.nativeElement.style.backgroundColor = 'green';
+  //   else this.button.nativeElement.style.backgroundColor = 'orange';
+  //   this.isLongPressed = !this.isLongPressed;
+  //   this.longPress = this.isLongPressed ? 'second state' : 'first state';
+  // }
+
+  // onLongPressing() {
+  //   this.longPressing += 1;
+  // }
+  // ch="chat"
   ngOnInit(): void {
   }
 
@@ -24,9 +40,11 @@ export class ChatComponent implements OnInit {
  
   confirm(): void {
     this.message = 'Confirmed!';
-    this.messages=[]
-    this.ar=[]
+    console.log(this.message)
+    
+    // this.messages=[]
     this.modalRef.hide();
+    this.saveMsg();
   }
   
   decline(): void {
@@ -67,10 +85,29 @@ export class ChatComponent implements OnInit {
     console.log(this.ar)
   }
 
-  saveChat(id){
-    console.log("harekrishna")
-    this.ar[id]=1;
+  saveChat(id,checked:boolean){
+    console.log("harekrishna",checked)
+    if(checked==true)
+    {this.ar[id]=1;}
+    else{
+      this.ar[id]=0;
+    }
+    console.log(this.ar)
 
+  }
+  saveMsg(){
+    const len=this.ar.length;
+    for(var i=0;i<this.messages.length;i++){
+      if(this.ar[i]==0){
+        console.log(i,this.messages[i])
+        this.messages.splice(i,1)
+        this.ar.splice(i,1)
+        
+         i--;
+      }
+    }
+    console.log(this.messages)
+    console.log(this.ar)
   }
 
 }
