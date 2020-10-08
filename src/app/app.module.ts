@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 import { NbChatModule } from '@nebular/theme';
 import { PushComponent } from './components/snehita/push/push.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { PushComponent } from './components/snehita/push/push.component';
     NbSidebarModule.forRoot(),
     NbButtonModule,
     NbChatModule.forRoot(),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
