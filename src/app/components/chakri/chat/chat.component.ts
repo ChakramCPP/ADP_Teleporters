@@ -77,7 +77,7 @@ export class ChatComponent implements OnInit {
       type: files.length ? 'file' : 'text',
       files: files,
       user: {
-        name: userName,
+        name: "pani",
         avatar: avatar,
       },
     });

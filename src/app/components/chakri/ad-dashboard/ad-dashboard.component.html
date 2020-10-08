@@ -1,0 +1,201 @@
+<nb-layout>
+
+    <nb-sidebar class="colored-column-success" style="width: 140px;">
+    
+      <div class="row">
+        <div class="col-7">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-task" role="tab" aria-controls="task">New Task</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-poll" role="tab" aria-controls="poll">Poll</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-survey" role="tab" aria-controls="survey">Survey</a>
+            <a class="list-group-item list-group-item-action" id="list-feed-list" data-toggle="list" href="#list-feed" role="tab" aria-controls="feed">Add Feed</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+          </div>
+        </div>
+      </div>
+    </nb-sidebar>
+    
+      <nb-layout-column>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-task" role="tabpanel" aria-labelledby="list-task-list">
+              
+              <div class="card" style="width: 20rem;">
+                      
+                <div class="card-body">
+                  <label for="tname">Task</label>
+                  
+                  <h5 class="card-title">
+                      
+                      <input type="text" name="tanme" placeholder="Name of the Task">
+                    </h5>
+                  <label for="tdescription"> Task Description</label>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                      
+                      <input type="text" name="pdescription" placeholder="Task description">
+                  </h6>
+                  <br>
+                  <label for="deadline"> Finish by:</label>
+                  
+                  <input type="datetime-local" name="deadline" placeholder="Task deadline">  
+  
+                  <br>
+                  <br>
+  
+                  <input type="file" name="tfile">                 
+                  
+                  
+                  
+                </div>
+              
+                <button class="btn btn-primary">Add Option</button>
+                <button class="btn btn-success float-left">Conduct Poll</button>
+            </div>
+              
+  
+            </div>
+            <div class="tab-pane fade" id="list-poll" role="tabpanel" aria-labelledby="list-poll-list">
+  
+                  <div class="card" style="width: 20rem;">
+                      
+                      <div class="card-body">
+                        <label for="ptitle">Title</label>
+                        
+                        <h5 class="card-title">
+                            
+                            <input type="text" name="ptitle" placeholder="Pole title">
+                          </h5>
+                        <label for="pdescription">Description</label>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            
+                            <input type="text" name="pdescription" placeholder="Pole description">
+                        </h6>
+                        <label for="pquestion">Question</label>
+                        <p class="card-text">
+                           
+                            <input type="text" name="pquestion" id="" placeholder="Question">
+                          </p>
+                      </div>
+                      <div class="card-body" *ngFor="let _ of [1,2]; let idx=index;">
+                          <label for="poption">Option {{_}}:</label>
+                          
+                          <input type="text" name="poption" id="idx" placeholder="option">
+                      </div>
+                      <button class="btn btn-primary">Add Option</button>
+                      <button class="btn btn-success float-left">Conduct Poll</button>
+                  </div>
+      
+      
+            </div>
+      
+            <div class="tab-pane fade" id="list-survey" role="tabpanel" aria-labelledby="list-survey-list">
+      
+              <div class="card-group" style="width: 50rem;">
+                  <div class="card"> 
+                      <div class="card-body">
+                          <label for="s1title">Title</label>
+                          
+                          <h5 class="card-title">
+                              
+                              <input type="text" name="s1title" placeholder="Survey title">
+                            </h5>
+                          <label for="s1description">Description</label>
+                          <h6 class="card-subtitle mb-2 text-muted">
+                              
+                              <input type="text" name="s1description" placeholder="Survey description">
+                          </h6>
+                          <label for="s1question">Question</label>
+                          <p class="card-text">
+                             
+                              <input type="text" name="s1question" id="" placeholder="Question">
+                            </p>
+                      </div>
+                        <div class="card-body" *ngFor="let _ of [1,2]; let idx=index;">
+                            <label for="s1option">Option {{_}}:</label>
+                            
+                            <input type="text" name="s1option" id="idx" placeholder="option">
+                        </div>
+                        <button class="btn btn-primary">Add Option</button>
+      
+                        <div class="card-body">
+                              <label for="s2type">Type of Answer:</label>
+                              
+                              <select name="s2type" id="">
+                                  <option value="CheckBoxes">CheckBoxes</option>
+                                  <option value="Radio">Radio Button</option>
+                              </select>
+                          </div>
+                        <button class="btn btn-success float-left">Add to Survey</button>
+                  </div>
+                      <div class="card" style="margin-left: 40px;">
+                          <div class="card-body">
+                              <label for="ptitle">Title</label>
+                              
+                              <h5 class="card-title">
+                                  
+                                  <input type="text" name="s2title" placeholder="Survey title">
+                              </h5>
+                              <label for="s2description">Description</label>
+                              <h6 class="card-subtitle mb-2 text-muted">
+                                  
+                                  <input type="text" name="s2description" placeholder="Survey description">
+                              </h6>
+                              <label for="s2question">Question</label>
+                              <p class="card-text">
+                              
+                                  <input type="text" name="s2question" id="" placeholder="Question">
+                              </p>
+                          </div>
+                          <div class="card-body">
+                              <label for="s2type">Type of Answer:</label>
+                              
+                              <select name="s2type" id="">
+                                  <option value="Long Answer">Long Answer</option>
+                                  <option value="Short Answer">Short Answer</option>
+                                  <option value="Rating">Rating</option>
+                              </select>
+                          </div>
+                          
+                          <button class="btn btn-success float-left">Add to Survey</button>
+                      </div>
+               </div>
+       
+            </div>
+      
+            <div class="tab-pane fade" id="list-feed" role="tabpanel" aria-labelledby="list-feed-list">
+                  
+              <div class="card" style="width: 20rem;">
+                      
+                <div class="card-body">
+                  <label for="ftitle">Title</label>
+                  
+                  <h5 class="card-title">
+                      
+                      <input type="text" name="ftitle" placeholder="Title of the Feed">
+                    </h5>
+                  <label for="fdescription"> Feed Description</label>
+                  <textarea name="fdescription" id="" cols="30" rows="10"></textarea>
+                  <br>
+                  <div class="card-body" *ngFor="let _ of [1,2]; let idx=index;">
+                    <label for="poption">URL {{_}}:</label>
+                    
+                    <input type="text" name="poption" id="idx" placeholder="option">
+                   </div>
+                   
+                   <br>
+                   <br>
+                </div>
+              
+                <button class="btn btn-primary">Add URL</button>
+                <button class="btn btn-success float-left">Share News</button>
+            </div>
+  
+            </div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                  SETTINGS
+            </div>
+          </div>
+        </div>
+        
+      </nb-layout-column>
+  </nb-layout>

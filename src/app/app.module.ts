@@ -16,6 +16,21 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSidebarModule, NbButtonModule } from '@nebular/theme';
 import { NbChatModule } from '@nebular/theme';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AdHomeComponent } from './components/chakri/ad-home/ad-home.component';
+import { TimerComponent } from './components/chakri/timer/timer.component';
+import { MyComponentComponent } from './components/chakri/sample/my-component/my-component.component';
+import { MyCompComponent } from './components/chakri/sample/my-comp/my-comp.component';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { UserHomeComponent } from './components/chakri/user-home/user-home.component';
+import { FeedComponent } from './components/chakri/feed/feed.component';
+import { AdDashboardComponent } from './components/chakri/ad-dashboard/ad-dashboard.component';
+import { UserDashboardComponent } from './components/chakri/user-dashboard/user-dashboard.component';
 
 
 @NgModule({
@@ -27,7 +42,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ChatComponent,
     PollComponent,
     SurveyComponent,
-    LongPress
+    LongPress,
+    AdHomeComponent,
+    TimerComponent,
+    MyComponentComponent,
+    MyCompComponent,
+    UserHomeComponent,
+    FeedComponent,
+    AdDashboardComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +63,14 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     NbButtonModule,
     NbChatModule.forRoot(),
     ModalModule.forRoot(),
-    NbCheckboxModule
+    NbCheckboxModule,
+    FormsModule,
+    FlexLayoutModule,
+    MatDatepickerModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
