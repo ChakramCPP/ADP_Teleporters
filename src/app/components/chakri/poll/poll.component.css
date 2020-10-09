@@ -1,0 +1,12 @@
+.container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card{
+    background-color: lightcoral;
+}
+h3{
+    background-color: lightskyblue;
+}
+p{
+    text-align: right;
+}

@@ -1,1 +1,31 @@
-<p>kanban works!</p>
+<div class="root">
+    
+  
+    <div class="board">
+  
+      <div class="board-wrapper">
+  
+        <div class="board-columns" style="background-color: lightgoldenrodyellow;" cdkDropListGroup>
+          <div class="board-column" style="background-color: {{bg[idx]}};" *ngFor="let column of board.columns; let idx=index;">
+  
+            <div class="column-title">
+              {{ column.name }}
+            </div>
+  
+            <div class="tasks-container"
+            cdkDropList
+            [cdkDropListData]="column.tasks"
+            (cdkDropListDropped)="drop($event)">
+              <div class="task" *ngFor="let item of column.tasks" cdkDrag>
+                <button  class="btn btn-outline-primary" style="width : 180px" (click)="open()">{{item}}</button>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </div>

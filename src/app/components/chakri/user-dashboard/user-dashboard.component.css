@@ -1,0 +1,28 @@
+.card{
+    background-color:lightcoral;
+}
+h3{
+    background-color: lightskyblue;
+    font-size: medium;
+}
+.small{
+    box-shadow: black;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    text-size-adjust: initial;
+}
+.body{
+    margin-left: 50px;
+}
+.container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+}
+.date{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: end;
+}
+

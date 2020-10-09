@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { LongPress } from './components/chakri/chat/long-press';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -31,6 +32,8 @@ import { UserHomeComponent } from './components/chakri/user-home/user-home.compo
 import { FeedComponent } from './components/chakri/feed/feed.component';
 import { AdDashboardComponent } from './components/chakri/ad-dashboard/ad-dashboard.component';
 import { UserDashboardComponent } from './components/chakri/user-dashboard/user-dashboard.component';
+import { CounterComponent } from './models/counter/counter.component';
+import { TipsComponent } from './components/tips/tips.component';
 
 
 @NgModule({
@@ -50,7 +53,9 @@ import { UserDashboardComponent } from './components/chakri/user-dashboard/user-
     UserHomeComponent,
     FeedComponent,
     AdDashboardComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    CounterComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +76,7 @@ import { UserDashboardComponent } from './components/chakri/user-dashboard/user-
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

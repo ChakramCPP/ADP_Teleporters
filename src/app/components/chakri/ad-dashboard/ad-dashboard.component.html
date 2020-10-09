@@ -48,8 +48,11 @@
                   
                 </div>
               
-                <button class="btn btn-primary">Add Option</button>
-                <button class="btn btn-success float-left">Conduct Poll</button>
+                <div style="margin-left: 20px;">
+                  <input  type="checkbox" id="urgent" (change)="doIfChecked($event,'new task assigned')">
+                <label for="urgent"> Urgent/Emergency</label>
+                </div>
+                <button class="btn btn-success float-left">Add Task</button>
             </div>
               
   
@@ -81,6 +84,12 @@
                           
                           <input type="text" name="poption" id="idx" placeholder="option">
                       </div>
+
+                      <div style="margin-left: 20px;">
+                        <input  type="checkbox" id="purgent" (change)="doIfChecked($event,'new poll assigned')">
+                      <label for="purgent"> Urgent/Emergency</label>
+                      </div>
+
                       <button class="btn btn-primary">Add Option</button>
                       <button class="btn btn-success float-left">Conduct Poll</button>
                   </div>
@@ -127,37 +136,42 @@
                           </div>
                         <button class="btn btn-success float-left">Add to Survey</button>
                   </div>
-                      <div class="card" style="margin-left: 40px;">
-                          <div class="card-body">
-                              <label for="ptitle">Title</label>
-                              
-                              <h5 class="card-title">
-                                  
-                                  <input type="text" name="s2title" placeholder="Survey title">
-                              </h5>
-                              <label for="s2description">Description</label>
-                              <h6 class="card-subtitle mb-2 text-muted">
-                                  
-                                  <input type="text" name="s2description" placeholder="Survey description">
-                              </h6>
-                              <label for="s2question">Question</label>
-                              <p class="card-text">
-                              
-                                  <input type="text" name="s2question" id="" placeholder="Question">
-                              </p>
-                          </div>
-                          <div class="card-body">
-                              <label for="s2type">Type of Answer:</label>
-                              
-                              <select name="s2type" id="">
-                                  <option value="Long Answer">Long Answer</option>
-                                  <option value="Short Answer">Short Answer</option>
-                                  <option value="Rating">Rating</option>
-                              </select>
-                          </div>
+                  <div class="card" style="margin-left: 40px;">
+                      <div class="card-body">
+                          <label for="ptitle">Title</label>
                           
-                          <button class="btn btn-success float-left">Add to Survey</button>
+                          <h5 class="card-title">
+                              
+                              <input type="text" name="s2title" placeholder="Survey title">
+                          </h5>
+                          <label for="s2description">Description</label>
+                          <h6 class="card-subtitle mb-2 text-muted">
+                              
+                              <input type="text" name="s2description" placeholder="Survey description">
+                          </h6>
+                          <label for="s2question">Question</label>
+                          <p class="card-text">
+                          
+                              <input type="text" name="s2question" id="" placeholder="Question">
+                          </p>
                       </div>
+                      <div class="card-body">
+                          <label for="s2type">Type of Answer:</label>
+                          
+                          <select name="s2type" id="">
+                              <option value="Long Answer">Long Answer</option>
+                              <option value="Short Answer">Short Answer</option>
+                              <option value="Rating">Rating</option>
+                          </select>
+                      </div>
+                      
+                      <button class="btn btn-success float-left">Add to Survey</button>
+                  </div>
+
+                  <div style="margin-left: 20px;">
+                    <input  type="checkbox" id="surgent" (change)="doIfChecked($event,'new survey assigned')">
+                  <label for="surgent"> Urgent/Emergency</label>
+                  </div>
                </div>
        
             </div>
@@ -171,10 +185,10 @@
                   
                   <h5 class="card-title">
                       
-                      <input type="text" name="ftitle" placeholder="Title of the Feed">
+                      <input [(ngModel)]="title" type="text" name="ftitle" placeholder="Title of the Feed">
                     </h5>
                   <label for="fdescription"> Feed Description</label>
-                  <textarea name="fdescription" id="" cols="30" rows="10"></textarea>
+                  <textarea [(ngModel)]="description" name="fdescription" id="" cols="30" rows="10"></textarea>
                   <br>
                   <div class="card-body" *ngFor="let _ of [1,2]; let idx=index;">
                     <label for="poption">URL {{_}}:</label>
@@ -185,9 +199,14 @@
                    <br>
                    <br>
                 </div>
+
+                <div style="margin-left: 20px;">
+                  <input  type="checkbox" id="furgent" (change)="doIfChecked($event,'new feed assigned')">
+                <label for="furgent"> Urgent/Emergency</label>
+                </div>
               
                 <button class="btn btn-primary">Add URL</button>
-                <button class="btn btn-success float-left">Share News</button>
+                <button class="btn btn-success float-left" (click)="notifyUsers()">Share News</button>
             </div>
   
             </div>

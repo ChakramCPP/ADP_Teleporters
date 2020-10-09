@@ -1,1 +1,25 @@
-<p>user-dashboard works!</p>
+<!-- <div class="container">
+
+    <h1>Get Notifications!
+    </h1>
+
+
+    <button (click)="notify()">Show Notification</button>
+
+</div>
+<BR><BR>
+
+ <label for="time"> Schedule Interval(in minutes)  </label>
+ <input type="datetime-local" id="message" name="message"  [(ngModel)]="message">
+ <button class="button btn-primary"(click)="scheduleTime()" >Set Time</button> -->
+ 
+ <nb-layout>
+     <nb-sidebar style="width: 180px;">
+         <a routerLink='../survey'>Survey/Poll</a>
+         
+     </nb-sidebar>
+     <nb-layout-column>
+        <!-- <app-poll></app-poll> -->
+        <app-kanban></app-kanban>
+     </nb-layout-column>
+ </nb-layout>

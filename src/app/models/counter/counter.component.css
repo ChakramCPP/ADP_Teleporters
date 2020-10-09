@@ -1,0 +1,21 @@
+.login{
+    margin-top:60%;
+    margin-left:60%;
+    padding:  5px;
+   
+   
+}
+
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px grey;
+    background-color:lightgray;
+  }
+  .center{
+      position: relative;
+      top: 500%;
+      left: 500%;
+      transform: translate(50%,50%);
+  }

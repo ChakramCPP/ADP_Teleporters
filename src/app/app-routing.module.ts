@@ -1,3 +1,5 @@
+import { SurveyComponent } from './components/chakri/survey/survey.component';
+import { KanbanComponent } from './components/chakri/kanban/kanban.component';
 import { UserDashboardComponent } from './components/chakri/user-dashboard/user-dashboard.component';
 import { AdDashboardComponent } from './components/chakri/ad-dashboard/ad-dashboard.component';
 import { FeedComponent } from './components/chakri/feed/feed.component';
@@ -18,6 +20,7 @@ const routes: Routes = [
     {path:'dashboard', component:UserDashboardComponent},
     {path:'feed', component:FeedComponent},
     {path:'chat', component:ChatComponent},
+    {path:'survey',component:SurveyComponent}
     ],
   },
   {path:'snehita',component:Sample2Component},

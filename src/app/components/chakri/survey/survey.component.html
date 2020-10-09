@@ -1,1 +1,86 @@
-<p>survey works!</p>
+<div style="float: left;">
+
+    <div *ngIf="!v" class="container">
+       
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-header"><span class="fa fa-line-chart"></span> Please Rate our Services</h3>
+            </div>
+            <div class="card-block">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Excellent
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Good
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Satisfactory
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Needs Improvement
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Poor
+                            </label>
+                        </div>
+                    </li>
+                    <div class="card-header">
+                        <h3 class="card-header"><span class="fa fa-line-chart"></span>
+                            Any Improvements should be made by the management? If yes mention those.</h3> 
+                        </div>
+                        <input type="text" value="">
+                    <div class="card-header">
+                            <h3 class="card-header"><span class="fa fa-line-chart"></span>
+                                How is your interaction with your colleagues in organization?</h3> 
+                            </div>
+                            <input type="text" value="" height="list-group">
+                    <div class="card-header">
+                                <h3 class="card-header"><span class="fa fa-line-chart"></span>
+                                    How is the working environment in ADP?</h3> 
+                                </div>
+                                <input type="text" value="" height="list-group">  
+                            <div class="date">
+                                <input type="date" value="">
+                            </div>
+                    
+                </ul>
+            </div>
+            <div class="card-footer text-xs-center">
+                <button (click)="hide()" type="button" class="btn btn-primary btn-block btn-sm">
+                    Submit</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+    <div *ngIf="v" style="text-align: center;">
+            YOU Have Participated in the Survey!, Thanks...
+    </div>
+    
+    
+
+</div>
+
+<div style="float: left;">
+ <app-poll></app-poll>
+</div>
